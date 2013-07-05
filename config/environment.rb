@@ -27,6 +27,8 @@ require 'carrierwave/orm/activerecord'
 require 'bcrypt'
 require 'faker'
 
+require 'sinatra/flash'
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
@@ -42,4 +44,8 @@ require APP_ROOT.join('config', 'database')
 CarrierWave.configure do |config|
   config.root = APP_ROOT
   config.store_dir = "public/uploads/images"
+end
+
+configure do
+	enable :sessions
 end

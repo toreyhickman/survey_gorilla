@@ -23,6 +23,8 @@ gem 'faker'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'sinatra-flash'
+
 group :test do
   gem 'faker'
   gem 'rspec'
