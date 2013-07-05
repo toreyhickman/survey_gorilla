@@ -7,15 +7,12 @@
       <li><a href="/logout">Log out</a></li>
     </ul>
   <% else %>
-    <form action="/login" method="post">
-      <label for="username">Username: </label>
-      <input type="text" name="user_info[username]">
-      <br>
-      <label for="password">Password: </label>
-      <input type="password" name="user_info[password]">
-      <br>
-      <input type="submit" value="Login">
-    </form>  
-  <% end %>
+    <ul>
+      <li><a id="signin" href="">Sign in</a></li>
+      <li><a id="register" href="">Register</a></li>
+    </ul>
 
+    <div id="signform">
+    </div>
+  <% end %>
 </div>
