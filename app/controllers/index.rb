@@ -13,6 +13,7 @@ post '/login' do
 			redirect '/'
 		else
 			flash[:notice] = "Login failed"
+			redirect '/'
 		end
 	else
 		flash[:notice] = "Login failed"
