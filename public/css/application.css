@@ -7,3 +7,28 @@
 th {
   text-align: left;
 }
+
+.flash {
+	width: 600px;
+	padding: 5px;
+	font-weight: bold;
+	margin: 20px auto;
+	background: lighten(#FF0000, 60%);
+	color: #FF0000;
+	border: 1px solid #FF0000;
+}
+
+.nav {
+	list-style-type: none;
+	padding: 0;
+}
+.nav li {
+	float: left;
+	border: 1px solid black;
+	padding: 1px 5px 1px 5px;
+}
+.nav li a {
+	text-align: center;
+	display: block;
+	width: 60px;
+}
