@@ -17,6 +17,12 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'bcrypt-ruby'
+gem 'faker'
+
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :test do
   gem 'faker'
   gem 'rspec'
