@@ -3,7 +3,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var submitButton = {action: '/login', button: 'Log in'};
 		$.post('/signform', submitButton, function(response) {
-			$('#signform').html(response);
+			$('#signregisterform').html(response);
 		});
 	});
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var submitButton = {action: '/register', button: 'Register'};
 		$.post('/signform', submitButton, function(response) {
-			$('#register').html(response);
+			$('#signregisterform').html(response);
 		});
 	});
 });
