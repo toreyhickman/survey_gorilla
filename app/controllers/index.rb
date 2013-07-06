@@ -1,19 +1,14 @@
 get '/' do
-  erb :index, :layout => :landing_page
+  erb :index
 end
 
 post '/login' do
 	user_info = params[:user_info]
 	user = User.find_by_username(user_info[:username])
 
-	if user
-		if user.password == user_info[:password]
-			session[:user_id] = user.id
-			redirect '/'
-		else
-			flash[:notice] = "Login failed"
-			redirect '/'
-		end
+	if user && user.password == user_info[:password]
+		session[:user_id] = user.id
+		redirect '/surveys'
 	else
 		flash[:notice] = "Login failed"
 		redirect '/'

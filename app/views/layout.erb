@@ -17,17 +17,20 @@
 
   <title></title>
 </head>
-<body>
+<body class="gorilla">  
   <% if current_user %>
+    
     <ul class="nav">
-      <li><a href="/make">Make</a></li>
-      <li><a href="/surveys">Take</a></li>
-      <li><a href="/history">History</a></li>
-      <li><a href="/logout">Log out</a></li>
-    </ul><br>
-    <p>This is the layout.erb page, not the landing_page.erb page.</p>
+      <li><a href="/surveys">Take Survey</a></li>
+      <li><a href="/make">Create Survey</a></li>
+      <li><a href="/history">Your Profile</a></li>
+      <li><a href="/logout">Log Out</a></li>
+    </ul>
+    <div class="container">
+      <%= yield %>
+    </div>
+  <% else %>
+    <%= yield %>
   <% end %>
-  <section><%= styled_flash %></section>
-  <%= yield %>
 </body>
 </html>
