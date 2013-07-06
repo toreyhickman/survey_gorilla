@@ -22,13 +22,17 @@ $(document).ready(function() {
 		var num = $('#addquestion option:selected').text();
 		$('.choice').remove();
 		for(i=0; i<num; i++) {
-				$("#makesurveyformsubmit").before("<label class='choice' for='question1[option"+(i+1)+"]'>Choice "+(i+1)+": <input class='choice' type='text' name='question1[option"+(i+1)+"]' placeholder='Enter choice here.'><br></label>");
+				$("#makesurveyformsubmit").before("<label class='choice' for='question1[options[option"+(i+1)+"]'>Choice "+(i+1)+": <input class='choice' type='text' name='question1[options[option"+(i+1)+"]' placeholder='Enter choice here.'><br></label>");
 		}
 	});
 
-	$('#makesurveyform').on('submit', function() {
+	$('#makesurveyform').on('submit', function(event) {
+		event.preventDefault();
 		var data = $(this).serialize();
-			// $.post('/add_survey', data, function(response) {
-
+		var url = '/add_survey'
+		$.post(url, data, function() {
+			var div = $("#survey_complete")
+			$(div).css("display", "block");
+		});
 	});
 });

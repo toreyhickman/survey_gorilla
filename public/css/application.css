@@ -156,3 +156,7 @@ h1 {
 .your_answer {
   color: green;
 }
+
+#survey_complete {
+  display: none;
+}
