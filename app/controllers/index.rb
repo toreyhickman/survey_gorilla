@@ -1,5 +1,4 @@
 get '/' do
-  # Look in app/views/index.erb
   erb :index, :layout => :landing_page
 end
 
@@ -42,4 +41,21 @@ post '/signform' do
 	else
 		redirect '/'
 	end
+end
+
+get '/make' do
+	erb :make
+end
+
+post '/add_survey' do
+	new_survey = Survey.create(name: params[:title])
+
+	new_question = Question.create(text: params[:survey][:question][:text], survey_id: survey.id)
+	new_question.options << Option.create(text: params[:survey][:question][:option][:text], question_id: question.id)
+
+	survey = Survey.create(name: params[:survey][:title])
+	# params[].each do |question|
+	# survey.questions << Question.create(params[:question1])
+	# end
+	redirect '/'
 end
