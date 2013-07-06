@@ -1,19 +1,22 @@
-<h1><%= @survey.name %> Results:</h1>
+<div class="container">
 
-<p><%= "#{Session.where(survey_id: @survey.id).count} people have taken this survey. The breakdown of answers is below.  Your answer is in green" %></p>
+  <h1><%= @survey.name %> Results:</h1>
 
-<% @survey.questions.each do |question| %>
-  <%= question.text %>
+  <p><%= "#{Session.where(survey_id: @survey.id).count} people have taken this survey. The breakdown of answers is below.  Your answer is in green" %></p>
 
-  <ul>
+  <% @survey.questions.each do |question| %>
+    <%= question.text %>
 
-    <% responses = @user.responses.map { |r| r.option_id } %>
-    
-    <% question.options.each do |option| %>
-      <% styling = responses.include?(option.id) ? "your_answer" : "" %>
-      <li class="<%= styling %>">
-        (<%= @responses.select { |r| r.option_id == option.id }.count %>) <%= option.text %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+    <ul>
+
+      <% responses = @user.responses.map { |r| r.option_id } %>
+      
+      <% question.options.each do |option| %>
+        <% styling = responses.include?(option.id) ? "your_answer" : "" %>
+        <li class="<%= styling %>">
+          (<%= @responses.select { |r| r.option_id == option.id }.count %>) <%= option.text %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

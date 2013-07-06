@@ -21,10 +21,11 @@
   <% if current_user %>
     <ul class="nav">
       <li><a href="/make">Make</a></li>
-      <li><a href="">Take</a></li>
-      <li><a href="">History</a></li>
+      <li><a href="/surveys">Take</a></li>
+      <li><a href="/history">History</a></li>
       <li><a href="/logout">Log out</a></li>
-    </ul>
+    </ul><br>
+    <p>This is the layout.erb page, not the landing_page.erb page.</p>
   <% end %>
   <section><%= styled_flash %></section>
   <%= yield %>

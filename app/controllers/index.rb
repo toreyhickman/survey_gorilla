@@ -48,14 +48,15 @@ get '/make' do
 end
 
 post '/add_survey' do
-	new_survey = Survey.create(name: params[:title])
-
-	new_question = Question.create(text: params[:survey][:question][:text], survey_id: survey.id)
-	new_question.options << Option.create(text: params[:survey][:question][:option][:text], question_id: question.id)
-
+	p "*********2"
+	p params
 	survey = Survey.create(name: params[:survey][:title])
-	# params[].each do |question|
-	# survey.questions << Question.create(params[:question1])
-	# end
-	redirect '/'
+	
+	new_question = Question.create(text: params[:question1][:question_text], survey_id: survey.id)
+	num_of_options = params[:question1][:options].keys.each do |option|
+		Option.create(text: params[:question1][:options][option], question_id: new_question.id)
+	end
+
 end
+
+
