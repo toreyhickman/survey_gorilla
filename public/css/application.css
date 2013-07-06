@@ -19,8 +19,9 @@ th {
 }
 
 .nav {
+  margin: 0 auto;
+  width: 600px;
 	list-style-type: none;
-	padding: 0;
 }
 .nav li {
 	float: left;
@@ -29,6 +30,10 @@ th {
 }
 .nav li a {
 	text-align: center;
-	display: block;
+	display: inline-block;
 	width: 60px;
+}
+
+.your_answer {
+  color: green;
 }

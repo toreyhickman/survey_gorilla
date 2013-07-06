@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#signin').on('click', function(event) {
 		event.preventDefault();
-		var submitButton = {action: '/login', button: 'Log in'}
+		var submitButton = {action: '/login', button: 'Log in'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signform').html(response);
 		});
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	$('#register').on('click', function(event) {
 		event.preventDefault();
-		var submitButton = {action: '/register', button: 'Register'}
+		var submitButton = {action: '/register', button: 'Register'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signform').html(response);
 		});
