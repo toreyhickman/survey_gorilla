@@ -19,7 +19,7 @@ post '/register' do
 	user_info = params[:user_info]
 	user = User.create(username: user_info[:username], password: user_info[:password])
 	session[:user_id] = user.id
-	redirect '/'
+	redirect '/surveys'
 end
 
 get '/logout' do
@@ -44,7 +44,7 @@ end
 
 post '/add_survey' do
 	survey = Survey.create(name: params[:survey][:title])
-	
+	User.find(session[:user_id]).created_surveys << survey
 	new_question = Question.create(text: params[:question1][:question_text], survey_id: survey.id)
 	params[:question1][:options].keys.each do |option|
 		Option.create(text: params[:question1][:options][option], question_id: new_question.id)
