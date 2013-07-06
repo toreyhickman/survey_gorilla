@@ -101,3 +101,7 @@ th {
 #signregisterform input {
   margin: 5px 0 5px 0;
 }
+
+#logform {
+  border-top: 1px dotted #333;
+}

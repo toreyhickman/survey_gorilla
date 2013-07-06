@@ -18,9 +18,15 @@
   <title></title>
 </head>
 <body>
-  <div class="container">
-    <section><%= styled_flash %></section>
-    <%= yield %>
-  </div>
+  <% if current_user %>
+    <ul class="nav">
+      <li><a href="/make">Make</a></li>
+      <li><a href="">Take</a></li>
+      <li><a href="">History</a></li>
+      <li><a href="/logout">Log out</a></li>
+    </ul>
+  <% end %>
+  <section><%= styled_flash %></section>
+  <%= yield %>
 </body>
 </html>
