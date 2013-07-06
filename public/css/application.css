@@ -105,3 +105,7 @@ th {
 #logform {
   border-top: 1px dotted #333;
 }
+
+#survey_complete {
+  display: none;
+}
