@@ -1,0 +1,22 @@
+
+<form id="makesurveyform" action="/add_survey" method="POST">
+  <label for="survey[title]">Survey Title: </label><input type="text" name="survey[title]" placeholder="Enter survey title here."><br><br>
+  <label for="question1[question_text]">Question: </label><input type="text" name="question1[question_text]" placeholder="Enter question here."><br><br>
+  <label class="choice" for="question1[option1]">Choice 1: <input class="choice" type="text" name="question1[option1]" placeholder="Enter choice here."><br></label>
+  <input id="makesurveyformsubmit" type="submit"><br>
+</form><br><br>
+
+<form id="addquestion">
+  <label for="numberofchoices">Number of Choices: </label>
+  <select id="options" name="numberofchoices">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>    
+  </select><br>
+</form>

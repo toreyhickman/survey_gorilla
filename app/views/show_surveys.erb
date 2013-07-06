@@ -1,8 +1,6 @@
-<div class="container">
   <h1>Surveys</h1>
   <ul>
     <% @surveys.each do |survey| %>
     <li><a href="surveys/<%= survey.id %>"><%= survey.name %></a></li>
     <% end %>
   </ul>
-</div>
