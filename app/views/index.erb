@@ -1,11 +1,25 @@
 <div class="container">
   <% unless current_user %>
-    <ul>
-      <li><a id="signin" href="">Sign in</a></li>
-      <li><a id="register" href="">Register</a></li>
-    </ul>
 
-    <div id="signform">
+    
+
+    <div id="welcome_wrap" class="landing_div">
+      <h3>Survey Gorilla Baby</h3>
+      <p>
+        <strong>Survey Gorilla Baby</strong>: the best on the 
+        localhost to create a survey.  Please signin or 
+        register to continue.
+      </p>
+      <p class="center"><a id="signin" href="">Sign in</a></p>
+      <p class="center"><a id="register" href="">Register</a></p>
+      <div id="signregisterform"></div>
     </div>
+
+  <% else %>
+
+
+
+
+
   <% end %>
 </div>

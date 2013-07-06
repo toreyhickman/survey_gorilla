@@ -1,3 +1,16 @@
+.center {
+  text-align: center;
+}
+
+a, a:visited, a:hover {
+  color: #d70068;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0088cc;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
@@ -36,4 +49,55 @@ th {
 
 .your_answer {
   color: green;
+}
+
+
+/* css for landing page */
+.gorilla {
+  background: black url('/images/baby_gorilla.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.landing_div {
+  width: 300px;
+  min-height: 300px;
+  position: absolute;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  -moz-box-shadow:    0 0 100px 3px #000;
+  -webkit-box-shadow: 0 0 100px 3px #000;
+  box-shadow:         0 0 100px 3px #000;
+}
+
+.landing_div h3 {
+  text-align: center;
+  color: white;
+  background-color: #d70068;
+  padding: 16px 0 16px 0;
+  margin: 0;
+}
+
+.landing_div p {
+  padding: 8px 16px 16px 16px;
+}
+
+#welcome_wrap {
+  top: 20%;
+  margin-top: -50px;
+}
+
+#signregisterform {
+  color: #d70068;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 200px;
+  padding: 15px;
+}
+
+#signregisterform input {
+  margin: 5px 0 5px 0;
 }
