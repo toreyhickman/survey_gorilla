@@ -4,6 +4,7 @@ $(document).ready(function() {
 		var submitButton = {action: '/login', button: 'Log in'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signregisterform').html(response);
+			$('#signregisterform').css('border-top', '1px dotted #333');
 		});
 	});
 
@@ -12,6 +13,7 @@ $(document).ready(function() {
 		var submitButton = {action: '/register', button: 'Register'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signregisterform').html(response);
+			$('#signregisterform').css('border-top', '1px dotted #333');
 		});
 	});
 

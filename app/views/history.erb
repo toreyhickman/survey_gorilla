@@ -1,14 +1,14 @@
 <h1><%= @user.username %></h1>
 
-<h3>Your Surveys</h3>
-<ul>
+<h3 class="survey-heading">Surveys You've Created</h3>
+<ul class="survey-list">
   <% @user.created_surveys.each do |survey| %>
     <li><a href="survey_results/<%= survey.id %>"><%= survey.name %></a></li>
   <% end %>
 </ul>
 
-<h3>Surveys You've Answered</h3>
-<ul>
+<h3 class="survey-heading">Surveys You've Answered</h3>
+<ul class="survey-list">
   <% @user.answered_surveys.each do |survey| %>
     <li><a href="survey_results/<%= survey.id %>"><%= survey.name %></a></li>
   <% end %>

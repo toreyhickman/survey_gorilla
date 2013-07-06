@@ -1,56 +1,61 @@
 .center {
   text-align: center;
 }
-
 a, a:visited, a:hover {
   color: #d70068;
   text-decoration: none;
 }
-
 a:hover {
   color: #0088cc;
 }
-
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
-}
-
-.flash {
-	width: 600px;
-	padding: 5px;
-	font-weight: bold;
-	margin: 20px auto;
-	background: lighten(#FF0000, 60%);
-	color: #FF0000;
-	border: 1px solid #FF0000;
-}
-
-.nav {
   margin: 0 auto;
-  width: 600px;
+  width: 480px;
+  padding-bottom: 40px;
+/*  padding: 20px 20px 40px 20px;*/
+  background-color: white;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  overflow: hidden;
+/*  -moz-box-shadow:    0 0 100px 3px #000;
+  -webkit-box-shadow: 0 0 100px 3px #000;
+  box-shadow:         0 0 100px 3px #000;*/
+}
+.flash {
+  width: 100px;
+  padding: 10px 10px 10px 16px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 20px auto;
+  background: lighten(#FF0000, 60%);
+  color: #FF0000;
+}
+.nav {
+  margin: 20px auto;
+  margin-bottom: 0;
+  padding: 0;
+  width: 480px;
 	list-style-type: none;
+  background-color: #d70068;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 .nav li {
-	float: left;
-	border: 1px solid black;
-	padding: 1px 5px 1px 5px;
+  display: inline-block;
+  width: auto;
+  padding: 16px;
+  border-right: 1px solid white;
+}
+.nav li:last-child {
+  border: none;
 }
 .nav li a {
-	text-align: center;
-	display: inline-block;
-	width: 60px;
+  font-size: medium;
+  padding: ;
+  font-weight: 300;
+  text-align: center;
+  color: white;
 }
-
-.your_answer {
-  color: green;
-}
-
 
 /* css for landing page */
 .gorilla {
@@ -62,6 +67,10 @@ th {
 }
 
 .landing_div {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  margin-top: -50px;
   width: 300px;
   min-height: 300px;
   position: absolute;
@@ -82,12 +91,8 @@ th {
 }
 
 .landing_div p {
-  padding: 8px 16px 16px 16px;
-}
-
-#welcome_wrap {
-  top: 20%;
-  margin-top: -50px;
+  padding: 16px;
+  margin: 0;
 }
 
 #signregisterform {
@@ -95,13 +100,59 @@ th {
   text-decoration: none;
   margin: 0 auto;
   width: 200px;
-  padding: 15px;
+  padding: 15px 15px 20px 15px;
 }
 
 #signregisterform input {
   margin: 5px 0 5px 0;
 }
 
-#logform {
-  border-top: 1px dotted #333;
+.input-box {
+  width: 200px;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*---- Survey list & Take Survey ----- */
+
+.survey-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+h1 {
+  padding: 16px 0;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.take_survey {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.take_survey input[type="radio"] {
+  display: inline-block;
+  margin: 6px;
+}
+.take_survey input[type="submit"] {
+  margin-top: 18px;
+}
+
+/* ------ Results ------ */
+.results-summary {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.results-responses {
+  list-style-type: none;
+  padding-left: 18px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.your_answer {
+  color: green;
 }
