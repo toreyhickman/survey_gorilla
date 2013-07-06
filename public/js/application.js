@@ -11,7 +11,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var submitButton = {action: '/register', button: 'Register'};
 		$.post('/signform', submitButton, function(response) {
-			$('#signform').html(response);
+			$('#register').html(response);
 		});
 	});
 });
