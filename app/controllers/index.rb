@@ -48,12 +48,10 @@ get '/make' do
 end
 
 post '/add_survey' do
-	p "*********2"
-	p params
 	survey = Survey.create(name: params[:survey][:title])
 	
 	new_question = Question.create(text: params[:question1][:question_text], survey_id: survey.id)
-	num_of_options = params[:question1][:options].keys.each do |option|
+	params[:question1][:options].keys.each do |option|
 		Option.create(text: params[:question1][:options][option], question_id: new_question.id)
 	end
 
