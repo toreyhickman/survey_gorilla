@@ -18,9 +18,11 @@ $(document).ready(function() {
 		var submitButton = {action: '/login', button: 'Log in'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signregisterform').html(response);
-			$('#signregisterform').css('border-top', 'opx dotted #333');
+			$('#sign_or_register').hide();
 			resizeBackground();
-			setFocusToUsernameInput()
+			setFocusToUsernameInput();
+			$('#signregisterform').hide()
+			$('#signregisterform').fadeIn(500)
 		});
 		
 	});
@@ -30,9 +32,11 @@ $(document).ready(function() {
 		var submitButton = {action: '/register', button: 'Register'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signregisterform').html(response);
-			$('#signregisterform').css('border-top', '0px dotted #333');
+			$('#sign_or_register').hide();
 			resizeBackground();
 			setFocusToUsernameInput()
+			$('#signregisterform').hide()
+			$('#signregisterform').fadeIn(500)
 		});
 		
 	});
