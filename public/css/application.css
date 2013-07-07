@@ -11,7 +11,8 @@
 }
 
 .normal {
-  background: #eee;
+  background: url('/images/logo-01.png');
+  background-color: #eee;
 }
 
 a, a:visited, a:hover {
@@ -33,13 +34,13 @@ footer {
   min-height: 400px;
   padding: 16px 80px 64px 80px;
 /*  padding: 20px 20px 40px 20px;*/
-  background-color: #eee;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
   overflow: hidden;
   -moz-box-shadow:    0 0 100px 3px #bbb;
   -webkit-box-shadow: 0 0 100px 3px #bbb;
   box-shadow:         0 0 100px 3px #bbb;
+  background-color: #eee;
 }
 
 .container p {
