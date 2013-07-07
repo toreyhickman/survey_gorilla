@@ -1,5 +1,9 @@
 get '/' do
-  erb :index
+	if session[:user_id]
+		redirect '/surveys'
+	end
+
+  erb :index, :layout => :landing_page
 end
 
 post '/login' do
@@ -8,9 +12,9 @@ post '/login' do
 
 	if user && user.password == user_info[:password]
 		session[:user_id] = user.id
-		redirect '/surveys'
+		redirect '/history'
 	else
-		flash[:notice] = "Login failed"
+		flash[:notice] = "We didn't recognize<br>this username/password combination."
 		redirect '/'
 	end
 end
@@ -19,7 +23,7 @@ post '/register' do
 	user_info = params[:user_info]
 	user = User.create(username: user_info[:username], password: user_info[:password])
 	session[:user_id] = user.id
-	redirect '/surveys'
+	redirect '/history'
 end
 
 get '/logout' do

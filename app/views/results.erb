@@ -1,8 +1,14 @@
 <h1><%= @survey.name %> Results:</h1>
-<p class="results-summary"><%= "#{Session.where(survey_id: @survey.id).count} people have taken this survey. The breakdown of answers is below.  Your answers are in green." %></p>
+<p class="results-summary"><%= "#{Session.where(survey_id: @survey.id).count} people have taken this survey. The breakdown of answers is below.  Your answers are in pink." %></p>
+
+<br>
+
 <% @survey.questions.each do |question| %>
   <p class="results-summary">Question: </p>
   <p class="results-summary"><%= question.text %></p>
+
+  <br>
+
   <p class="results-summary">Responses:</p>
   <ul class="results-responses">
     <% responses = @user.responses.map { |r| r.option_id } %>

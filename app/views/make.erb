@@ -1,14 +1,28 @@
-<div class="container">
+<h1>Create a Survey</h1>
 
-  <form id="makesurveyform" action="/add_survey" method="POST">
-    <label for="survey[title]">Survey Title: </label><input type="text" name="survey[title]" placeholder="Enter survey title here."><br><br>
-    <label for="question1[question_text]">Question: </label><input type="text" name="question1[question_text]" placeholder="Enter question here."><br><br>
-    <label class="choice" for="question1[options[option1]]">Choice 1: <input class="choice" type="text" name="question1[options[option1]]" placeholder="Enter choice here."><br></label>
-    <input id="makesurveyformsubmit" type="submit"><br>
-  </form><br><br>
+<form id="makesurveyform" action="/add_survey" method="POST">
+  
+  <div class="label_div"><label for="survey[title]">Survey Title:</label></div>
+  <div class="input_div"><input type="text" name="survey[title]" placeholder="Enter survey title here."></div>
+  <br><br>
 
-  <form id="addquestion">
-    <label for="numberofchoices">Number of Choices: </label>
+  <div class="label_div"><label for="question1[question_text]">Question:</label></div>
+  <div class="input_div"><input type="text" name="question1[question_text]" placeholder="Enter question here."></div>
+  <br><br>
+
+  <div class="label_div"><label class="choice" for="question1[options[option1]]">Choice 1:</label></div>
+  <div class="input_div"><input class="choice" type="text" name="question1[options[option1]]" placeholder="Enter choice here."></div>
+
+  <br><br>
+
+  <input id="makesurveyformsubmit" type="submit"><br>
+
+</form><br><br>
+
+<form id="addquestion">
+  <div class="label_div"><label for="numberofchoices">Number of Choices: </label></div>
+  
+  <div>
     <select id="options" name="numberofchoices">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -20,10 +34,10 @@
       <option value="8">8</option>
       <option value="9">9</option>    
     </select><br>
-  </form>
-
-  <div id="survey_complete">
-    
-    Your survey is complete!
   </div>
+</form>
+
+<div id="survey_complete">
+
+Your survey is complete!
 </div>

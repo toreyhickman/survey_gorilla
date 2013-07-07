@@ -1,11 +1,28 @@
+function resizeBackground() {
+	var height = $('.front').css('height');
+	$('.background').css('height', height);
+}
+
+function setFocusToUsernameInput() {
+	document.getElementById('username_input').focus()
+}
+
 $(document).ready(function() {
+
+	resizeBackground();
+
+
+	
 	$('#signin').on('click', function(event) {
 		event.preventDefault();
 		var submitButton = {action: '/login', button: 'Log in'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signregisterform').html(response);
-			$('#signregisterform').css('border-top', '1px dotted #333');
+			$('#signregisterform').css('border-top', 'opx dotted #333');
+			resizeBackground();
+			setFocusToUsernameInput()
 		});
+		
 	});
 
 	$('#register').on('click', function(event) {
@@ -13,8 +30,11 @@ $(document).ready(function() {
 		var submitButton = {action: '/register', button: 'Register'};
 		$.post('/signform', submitButton, function(response) {
 			$('#signregisterform').html(response);
-			$('#signregisterform').css('border-top', '1px dotted #333');
+			$('#signregisterform').css('border-top', '0px dotted #333');
+			resizeBackground();
+			setFocusToUsernameInput()
 		});
+		
 	});
 
 	$('#addquestion').change(function(event) {
@@ -22,7 +42,7 @@ $(document).ready(function() {
 		var num = $('#addquestion option:selected').text();
 		$('.choice').remove();
 		for(i=0; i<num; i++) {
-				$("#makesurveyformsubmit").before("<label class='choice' for='question1[options[option"+(i+1)+"]'>Choice "+(i+1)+": <input class='choice' type='text' name='question1[options[option"+(i+1)+"]' placeholder='Enter choice here.'><br></label>");
+				$("#makesurveyformsubmit").before("<div class='label_div'><label class='choice' for='question1[options[option"+(i+1)+"]'>Choice "+(i+1)+":</label></div><div class='input_div'><input class='choice' type='text' name='question1[options[option"+(i+1)+"]' placeholder='Enter choice here.'></div><br><br>");
 		}
 	});
 

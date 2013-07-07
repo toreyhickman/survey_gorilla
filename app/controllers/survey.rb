@@ -5,6 +5,13 @@ end
 
 get '/surveys/:survey_id' do
   @survey = Survey.includes(:questions).find(params[:survey_id])
+
+  @user = User.find(session[:user_id])
+
+  if @user.answered_surveys.include?(@survey)
+    @already_taken = { :message => "You have already completed this survey." }
+  end
+
   erb :answer_survey
 end
 
