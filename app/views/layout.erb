@@ -17,20 +17,31 @@
 
   <title></title>
 </head>
-<body class="gorilla">  
+<body class="normal">  
   <% if current_user %>
     
-    <ul class="nav">
-      <li><a href="/surveys">Take Survey</a></li>
-      <li><a href="/make">Create Survey</a></li>
-      <li><a href="/history">Your Profile</a></li>
-      <li><a href="/logout">Log Out</a></li>
-    </ul>
+    <nav>
+      <ul class="nav">
+        <li><a href="/surveys">Take Survey</a></li>
+        <li><a href="/make">Create Survey</a></li>
+        <li><a href="/history">Your Profile</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
     <div class="container">
       <%= yield %>
     </div>
   <% else %>
     <%= yield %>
   <% end %>
+
+  <footer class="center">
+    <p>
+      Survey Gorilla Baby
+      <br>
+      <small>created by Chris J., Chris L., Karst, Rick, and Torey</small>
+    </p>
+  </footer>
+
 </body>
 </html>

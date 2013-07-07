@@ -1,6 +1,19 @@
 .center {
   text-align: center;
 }
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.normal {
+  background: #eee;
+}
+
 a, a:visited, a:hover {
   color: #d70068;
   text-decoration: none;
@@ -8,43 +21,63 @@ a, a:visited, a:hover {
 a:hover {
   color: #0088cc;
 }
+
+footer {
+  color: #999;
+  padding: 8px 0 0 0;
+}
+
 .container {
-  margin: 0 auto;
-  width: 480px;
-  padding-bottom: 40px;
+  margin: 32px auto 32px auto;
+  width: 440px;
+  min-height: 400px;
+  padding: 16px 80px 64px 80px;
 /*  padding: 20px 20px 40px 20px;*/
-  background-color: white;
+  background-color: #eee;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
   overflow: hidden;
-/*  -moz-box-shadow:    0 0 100px 3px #000;
-  -webkit-box-shadow: 0 0 100px 3px #000;
-  box-shadow:         0 0 100px 3px #000;*/
+  -moz-box-shadow:    0 0 100px 3px #bbb;
+  -webkit-box-shadow: 0 0 100px 3px #bbb;
+  box-shadow:         0 0 100px 3px #bbb;
 }
+
+.container p {
+  margin: 0;
+}
+
 .flash {
-  width: 100px;
+  text-align: center;
   padding: 10px 10px 10px 16px;
   font-weight: bold;
-  font-style: italic;
-  margin: 20px auto;
-  background: lighten(#FF0000, 60%);
-  color: #FF0000;
+  font-size: 20px;
+  color: black;
+  line-height: 20px
 }
-.nav {
-  margin: 20px auto;
-  margin-bottom: 0;
-  padding: 0;
-  width: 480px;
-	list-style-type: none;
+nav {
+  width: 100%;
   background-color: #d70068;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
 }
+
+.nav {
+  padding: 8px 0;
+  position: relative;
+	list-style-type: none;
+  width: 600px;
+  left: 50%;
+  margin: 0 0 0 -300px;
+}
+
 .nav li {
   display: inline-block;
-  width: auto;
-  padding: 16px;
-  border-right: 1px solid white;
+  width: 145px;
+  height: 16px;
+  padding: 0px;
+  border-right: 1px solid #eee;
+  text-align: center;
 }
 .nav li:last-child {
   border: none;
@@ -54,7 +87,7 @@ a:hover {
   padding: ;
   font-weight: 300;
   text-align: center;
-  color: white;
+  color: #eee;
 }
 
 /* css for landing page */
@@ -68,39 +101,69 @@ a:hover {
 
 .landing_div {
   position: absolute;
-  left: 40%;
+  left: 50%;
+  margin-left: -300px;
   top: 20%;
   margin-top: -50px;
   width: 300px;
-  min-height: 300px;
-  position: absolute;
-  background-color: white;
+  min-height: 200px;
+  background-color: none;
   border-radius: 16px;
   overflow: hidden;
-  -moz-box-shadow:    0 0 100px 3px #000;
-  -webkit-box-shadow: 0 0 100px 3px #000;
-  box-shadow:         0 0 100px 3px #000;
+  -moz-box-shadow:    0 0 100px 3px #333;
+  -webkit-box-shadow: 0 0 100px 3px #333;
+  box-shadow:         0 0 100px 3px #333;
+  color: #eee;
+  /*letter-spacing: 1px;*/
+  line-height: 1.4em;
+}
+
+.background {
+  background-color: #eee;
+  opacity: .25;
 }
 
 .landing_div h3 {
   text-align: center;
-  color: white;
+  color: #eee;
   background-color: #d70068;
   padding: 16px 0 16px 0;
   margin: 0;
+  font-size: 20px;
+}
+
+.landing_div h4 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 30px 0 30px;
 }
 
 .landing_div p {
-  padding: 16px;
+  padding: 16px 36px 16px 36px;
   margin: 0;
 }
 
-#signregisterform {
+.landing_div p a, .landing_div p a:visited, .landing_div p a:hover {
+  color: #eee;
+  
+}
+
+.landing_div p.list {
+  padding: 8px 0 0 0;
+}
+
+.landing_div p a:hover {
   color: #d70068;
+  /*text-decoration: underline;*/
+}
+
+#signregisterform {
+  color: #eee;
   text-decoration: none;
-  margin: 0 auto;
+  margin: 0px auto 0 auto;
   width: 200px;
-  padding: 15px 15px 20px 15px;
+  padding: 28px 15px 20px 15px;
 }
 
 #signregisterform input {
@@ -108,9 +171,9 @@ a:hover {
 }
 
 .input-box {
-  width: 200px;
+  width: 192px;
   padding-right: 0;
-  padding-left: 0;
+  padding-left: 4px;
   margin-right: 0;
   margin-left: 0;
 }
@@ -120,17 +183,13 @@ a:hover {
 .survey-list {
   list-style-type: none;
   padding: 0;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin: 0;
 }
+
 h1 {
-  padding: 16px 0;
-  margin-left: 80px;
-  margin-right: 80px;
+  padding: 0;
 }
 .take_survey {
-  margin-left: 80px;
-  margin-right: 80px;
 }
 .take_survey input[type="radio"] {
   display: inline-block;
@@ -140,23 +199,68 @@ h1 {
   margin-top: 18px;
 }
 
+label {
+  diplays: inline-block;
+  width: 100px;
+}
+
 /* ------ Results ------ */
 .results-summary {
   margin-left: 80px;
   margin-right: 80px;
 }
 
-.results-responses {
+ul.results-responses {
+  padding: 0;
+  margin: 0;
+}
+
+ul.results-responses li {
   list-style-type: none;
-  padding-left: 18px;
-  margin-left: 80px;
-  margin-right: 80px;
 }
 
 .your_answer {
-  color: green;
+  color: #D70068;
 }
 
 #survey_complete {
   display: none;
 }
+
+
+/* ------ Survey input divs -------- */
+.label_div {
+  width: 30%;
+  overflow: hidden;
+  float: left;
+}
+
+.input_div {
+  width: 70%;
+  overflow: hidden;
+  float: left;
+}
+
+input[type=submit] {
+  background-color: #d70068;
+  border: 0;
+  color: white;
+  width: 30%;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+}
+
+input[type=submit]:hover {
+  background-color: #0088cc;
+}
+
+input:focus {
+  outline-color: #0088cc;
+}
+
+#signregisterform input.login_button {
+  width: 200px;
+  margin: 24px 0 24px 0;
+}
+
